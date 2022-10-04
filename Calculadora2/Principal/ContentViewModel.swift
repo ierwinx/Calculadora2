@@ -88,11 +88,11 @@ class ContentViewModel: ObservableObject {
             case "+":
                 strResultado = String(num1 + num2)
             case "-":
-                strResultado = String(num1 - num2)
+                strResultado = String(num2 - num1)
             case "*":
                 strResultado = String(num1 * num2)
             case "/":
-                strResultado = String(num1 / num2)
+                strResultado = String(num2 / num1)
             default:
                 break
         }
@@ -114,7 +114,6 @@ class ContentViewModel: ObservableObject {
         contador2 = contador1
         contador1 = "0"
         operacion = op
-        strResultado = contador1
     }
     
 }

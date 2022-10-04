@@ -24,7 +24,7 @@ struct ContentView2: View {
                 LazyVGrid(columns: contentViewModel2.gridItem) {
                     ForEach(contentViewModel2.arrBtns, id: \.self) { btn in
                         Button {
-                            print(btn.strLabel)
+                            contentViewModel2.realizaOp(operacion: btn.operaion, strNumero: btn.strLabel)
                         } label: {
                             Text(btn.strLabel)
                                 .modifier(
@@ -40,7 +40,7 @@ struct ContentView2: View {
                 LazyVGrid(columns: contentViewModel2.gridItemFinal(contentViewModel2.cgfWidth)) {
                     ForEach(contentViewModel2.arrBtns2, id: \.self) { btn in
                         Button {
-                            print(btn.strLabel)
+                            contentViewModel2.realizaOp(operacion: btn.operaion, strNumero: btn.strLabel)
                         } label: {
                             Text(btn.strLabel)
                                 .modifier(
